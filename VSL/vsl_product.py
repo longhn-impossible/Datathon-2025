@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.ensemble import RandomForestRegressor 
 from sklearn.model_selection import train_test_split 
 
-df = pd.read_csv("products.csv")
+df = pd.read_csv('E:/Datathon/products.csv')
 
 print("1. Tối ưu hóa Tiền xử lý (One-Hot Encoding)...")
 df_encoded = pd.get_dummies(df[['cogs', 'category']], columns=['category'], drop_first=True)
@@ -29,5 +29,7 @@ result_df['Gia_Du_Doan_Pro'] = predictions
 result_df['Gia_Du_Doan_Pro'] = result_df['Gia_Du_Doan_Pro'].clip(lower=0)
 
 result_df = result_df.sort_values(by='product_id')
-result_df.to_csv('du_doan_gia_ban_PRO.csv', index=False)
+result_df.to_csv('E:/Datathon/File AI make/du_doan_product.csv', index=False)
 print("Hoàn thành xuất sắc! Em hãy mở file PRO ra để xem nhé.")
+
+
