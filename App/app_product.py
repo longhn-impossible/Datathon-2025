@@ -14,8 +14,8 @@ df = load_data()
 
 # 3. THANH BỘ LỌC (SIDEBAR)
 st.sidebar.header("⚙️ Bộ Lọc Dữ Liệu")
-chon_category = st.sidebar.multiselect("Chọn Category:", df['category'].unique(), default=df['category'].unique())
-chon_segment = st.sidebar.multiselect("Chọn Segment:", df['segment'].unique(), default=df['segment'].unique())
+chon_category = st.sidebar.multiselect("Chọn Category:", df['category'].unique(), default=[])
+chon_segment = st.sidebar.multiselect("Chọn Segment:", df['segment'].unique(), default=[])
 
 # --- TÍNH NĂNG TỰ LÀM: THANH TRƯỢT GIÁ TIỀN ---
 st.sidebar.markdown("---") # Kẻ một đường gạch ngang cho đẹp
